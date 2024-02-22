@@ -170,9 +170,13 @@
 .price-group {
     display: flex;
     gap: 1rem;
+    padding-top: 3rem;
 }
 
-.slider__input {
+.slider__input,
+#days,
+#orders,
+#salary {
     background-color: white;
     padding: 15px;
     border-radius: 12px;
@@ -183,75 +187,86 @@
     text-align: center;
 }
 
+.slider__input {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .slider__input-month {
     width: 100%;
+    margin-bottom: -7px;
 }
 
 /********** Стили диапазонного элемента ввода (слайдера) **********/
 /* Сбрасываем стили по умолчанию */
 input[type="range"] {
-   -webkit-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
     background: transparent;
     cursor: pointer;
     width: 100%;
-    padding: 0 0 3rem 0;
 }
 
 /* Удаляем фокусировку по умолчанию */
 input[type="range"]:focus {
-  outline: none;
+    outline: none;
 }
 
 /***** Стили для Chrome, Safari, Opera и Edge Chromium *****/
 /* дорожка слайдера */
 input[type="range"]::-webkit-slider-runnable-track {
-   background-color: #000000;
-   border-radius: 0.5rem;
-   height: 0.5rem;  
+    background-color: transparent;
+    border-radius: 0.5rem;
+    height: 0.5rem;
 }
 
 /* ползунок слайдера */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Переопределяем вид по умолчанию */
-   appearance: none;
-   margin-top: -12px; /* Установим ползунок по центру дорожки */
+    -webkit-appearance: none;
+    /* Переопределяем вид по умолчанию */
+    appearance: none;
+    margin-top: -12px;
+    /* Установим ползунок по центру дорожки */
 
-   /* пользовательские стили */
-   background-color: #000000;
-   height: 2rem;
-   width: 1rem;
+    /* пользовательские стили */
+    background-color: #000000;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
 }
 
-input[type="range"]:focus::-webkit-slider-thumb {   
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem; 
+input[type="range"]:focus::-webkit-slider-thumb {
+    border: 1px solid #053a5f;
+    outline: 3px solid #053a5f;
+    outline-offset: 0.125rem;
 }
 
 /******** Стили для Firefox ********/
 /* дорожка слайдера */
 input[type="range"]::-moz-range-track {
-   background-color: #053a5f;
-   border-radius: 0.5rem;
-   height: 0.5rem;
+    background-color: #000000;;
+    border-radius: 0.5rem;
+    height: 0.5rem;
 }
 
 /* ползунок слайдера */
 input[type="range"]::-moz-range-thumb {
-   border: none; /* Удаляем лишнюю рамку, которую добавляет FF */
-   border-radius: 0; /* Удаляем border-radius по умолчанию от FF */
+    border: none;
+    /* Удаляем лишнюю рамку, которую добавляет FF */
+    border-radius: 0;
+    /* Удаляем border-radius по умолчанию от FF */
 
-   /* пользовательские стили */
-   background-color: #5cd5eb;
-   height: 2rem;
-   width: 1rem;
+    /* пользовательские стили */
+    background-color: #000000;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
 }
 
 input[type="range"]:focus::-moz-range-thumb {
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem; 
+    border: 1px solid #053a5f;
+    outline: 3px solid #053a5f;
+    outline-offset: 0.125rem;
 }
 
 /* for whom */
@@ -376,6 +391,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 .form {
     padding: 5rem 2.5rem;
+    position: relative;
 }
 
 .form-group {
@@ -406,9 +422,10 @@ form {
     font-weight: 700;
     padding-bottom: 1.875rem;
     padding-top: 2.313rem;
+    text-align: center;
 }
 
-input {
+.form__text {
     display: flex;
     flex-direction: column;
     border-radius: 0.75rem;
@@ -418,11 +435,15 @@ input {
     outline: none;
 }
 
-input::placeholder {
+.form__text::placeholder {
     font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 400;
     color: #000000;
+}
+
+input[type=text] {
+    width: 500px;
 }
 
 :focus::-webkit-input-placeholder {
@@ -448,14 +469,15 @@ input::placeholder {
     border-radius: 0.75rem;
 }
 
-.form__bg {
-    background-image: url(./images/iphone.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.form__image {
+    position: absolute;
+    top: 34px;
+    transform: translateX(105%);
+    left: 0;
 }
 
 .form-logo {
-    width: 150px;
+    width: 46%;
 }
 
 /* footer */
