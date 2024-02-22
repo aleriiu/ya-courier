@@ -150,7 +150,7 @@
 
 .price {
     padding: 5rem 2.5rem 0 2.5rem;
-    
+
 }
 
 .price-container {
@@ -169,7 +169,6 @@
 
 .price-group {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -182,6 +181,77 @@
     font-weight: 600;
     width: 50%;
     text-align: center;
+}
+
+.slider__input-month {
+    width: 100%;
+}
+
+/********** Стили диапазонного элемента ввода (слайдера) **********/
+/* Сбрасываем стили по умолчанию */
+input[type="range"] {
+   -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    padding: 0 0 3rem 0;
+}
+
+/* Удаляем фокусировку по умолчанию */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Стили для Chrome, Safari, Opera и Edge Chromium *****/
+/* дорожка слайдера */
+input[type="range"]::-webkit-slider-runnable-track {
+   background-color: #000000;
+   border-radius: 0.5rem;
+   height: 0.5rem;  
+}
+
+/* ползунок слайдера */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Переопределяем вид по умолчанию */
+   appearance: none;
+   margin-top: -12px; /* Установим ползунок по центру дорожки */
+
+   /* пользовательские стили */
+   background-color: #000000;
+   height: 2rem;
+   width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {   
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem; 
+}
+
+/******** Стили для Firefox ********/
+/* дорожка слайдера */
+input[type="range"]::-moz-range-track {
+   background-color: #053a5f;
+   border-radius: 0.5rem;
+   height: 0.5rem;
+}
+
+/* ползунок слайдера */
+input[type="range"]::-moz-range-thumb {
+   border: none; /* Удаляем лишнюю рамку, которую добавляет FF */
+   border-radius: 0; /* Удаляем border-radius по умолчанию от FF */
+
+   /* пользовательские стили */
+   background-color: #5cd5eb;
+   height: 2rem;
+   width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem; 
 }
 
 /* for whom */
