@@ -24,13 +24,15 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__group">
-                <h1 class="hero__text">Доставляйте заказы <br /> из ресторанов, кафе и магазинов,
-                    когда Вам удобно и как удобно</h1>
-                <button class="hero__btn">Стать курьером</button>
-            </div>
-        </section>
+        <div class="section-wrapper hero-bg">
+            <section class="hero">
+                <div class="hero__group">
+                    <h1 class="hero__text">Доставляйте заказы <br /> из ресторанов, кафе и магазинов,
+                        когда Вам удобно и как удобно</h1>
+                    <button class="hero__btn">Стать курьером</button>
+                </div>
+            </section>
+        </div>
         <section class="description">
             <div class="description__container">
                 <img class="description-img" src="./images/description-img.png" alt="Яндекс курьер">
@@ -48,52 +50,55 @@
                 </p>
             </div>
         </section>
-        <section class="advantages">
-            <h2 class="advantages-header">Преимущества работы</h2>
-            <div class="advantages__cards">
-                <div class="advantages__card">
-                    <img class="advantages__card-img" src="./images/card-icon1.png" alt="icon">
-                    <p class="advantages__card-text">Вы сами выбираете время работы</p>
+        <div class="section-wrapper">
+            <section class="advantages">
+                <h2 class="advantages-header">Преимущества работы</h2>
+                <div class="advantages__cards">
+                    <div class="advantages__card">
+                        <img class="advantages__card-img" src="./images/card-icon1.png" alt="icon">
+                        <p class="advantages__card-text">Вы сами выбираете время работы</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img class="advantages__card-img" src="./images/card-icon2.png" alt="icon">
+                        <p class="advantages__card-text">Доставляйте на удобном вам транспорте или пешком</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img class="advantages__card-img" src="./images/card-icon3.png" alt="icon">
+                        <p class="advantages__card-text">Дополнительный доход
+                            за счет чаевых и новичков</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img class="advantages__card-img" src="./images/card-icon4.png" alt="icon">
+                        <p class="advantages__card-text">Еженедельные/ежедневные выплаты</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img class="advantages__card-img" src="./images/card-icon5.png" alt="icon">
+                        <p class="advantages__card-text">Работа в вашем районе</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img class="advantages__card-img" src="./images/card-icon6.png" alt="icon">
+                        <p class="advantages__card-text">Выдаем одежду и термокороб бесплатно</p>
+                    </div>
                 </div>
-                <div class="advantages__card">
-                    <img class="advantages__card-img" src="./images/card-icon2.png" alt="icon">
-                    <p class="advantages__card-text">Доставляйте на удобном вам транспорте или пешком</p>
-                </div>
-                <div class="advantages__card">
-                    <img class="advantages__card-img" src="./images/card-icon3.png" alt="icon">
-                    <p class="advantages__card-text">Дополнительный доход
-                        за счет чаевых и новичков</p>
-                </div>
-                <div class="advantages__card">
-                    <img class="advantages__card-img" src="./images/card-icon4.png" alt="icon">
-                    <p class="advantages__card-text">Еженедельные/ежедневные выплаты</p>
-                </div>
-                <div class="advantages__card">
-                    <img class="advantages__card-img" src="./images/card-icon5.png" alt="icon">
-                    <p class="advantages__card-text">Работа в вашем районе</p>
-                </div>
-                <div class="advantages__card">
-                    <img class="advantages__card-img" src="./images/card-icon6.png" alt="icon">
-                    <p class="advantages__card-text">Выдаем одежду и термокороб бесплатно</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <section class="price">
             <div class="price-container">
                 <div class="tab-text tab-text_first">Выберите желаемый доход и&nbsp;выполняте заказы:</div>
                 <div class="tab__slider">
-                    <p class="slider__input slider__input-month">доход в&nbsp;месяц <span id="salary">52&nbsp;000&nbsp;₽</span></p>
+                    <p class="slider__input slider__input-month">доход в&nbsp;месяц: <span
+                            id="salary">52&nbsp;000&nbsp;₽</span></p>
                     <input id="slider" type="range" min="1" max="4" step="1" value="1">
                     <div class="price-group">
-                        <p class="slider__input slider__input_small">среднее количество дней <span id="days">12</span>
+                        <p class="slider__input slider__input_small">среднее количество дней: <span id="days">12</span>
                         </p>
-                        <p class="slider__input slider__input_small slider__input_last">количество заказов <span
+                        <p class="slider__input slider__input_small slider__input_last">количество заказов: <span
                                 id="orders">300</span></p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="for-whom">
+        <!-- <section class="for-whom">
             <h2 class="for-whom__header">Кому подойдет работа в сервисах доставки
                 Яндекс и Delivery Club</h2>
             <div class="for-whom__cards">
@@ -118,83 +123,122 @@
                     <p class="for-whom__card-text">Велокурьеры</p>
                 </div>
             </div>
+        </section> -->
+        <section class="for-whom">
+            <h2 class="for-whom__header">Кому подойдет работа в сервисах доставки
+                Яндекс и Delivery Club</h2>
+            <div class="parent">
+                <div class="div1 div-small">
+                    <img class="div-img" src="./images/wide1.png" alt="">
+                    <p class="for-whom__card-text">Велокурьеры</p>
+                </div>
+                <div class="div2 div-small">
+                    <img class="div-img" src="./images/wide1.png" alt="">
+                    <p class="for-whom__card-text">Велокурьеры</p>
+                </div>
+                <div class="div3 div-big">
+                    <img class="div-img" src="./images/wide2.png" alt="">
+                    <p class="for-whom__card-text">Велокурьеры</p>
+                </div>
+                <div class="div4 div-big">
+                    <img class="div-img" src="./images/wide2.png" alt="">
+                    <p class="for-whom__card-text">Велокурьеры</p>
+                </div>
+                <div class="div5 div-small">
+                    <img class="div-img" src="./images/wide1.png" alt="">
+                    <p class="for-whom__card-text">Велокурьеры</p>
+                </div>
+                <div class="div6 div-small">
+                    <img class="div-img" src="./images/wide1.png" alt="">
+                    <p class="for-whom__card-text">Велокурьеры</p>
+                </div>
+            </div>
         </section>
-        <section class="faq">
-            <div class="faq__container container">
-                <h2 class="faq__title">
-                    Основные вопросы при трудоустройстве
-                </h2>
-                <div class="faq__list">
-                    <div class="faq__item">
-                        <div class="faq__header">
-                            Можно ли доставлять заказы на велосипеде, самокате или только пешком?
-                        </div>
-                        <div class="faq__content">
-                            <div class="faq__answer">Вы можете выполнять заказы удобным для Вас способом - пешком или
-                                использовать транспортное средство, в том числе личный автомобиль. Если вы хорошо
-                                управляетесь с велосипедом, самокатом, роликами и другими средствами передвижения —
-                                используйте их.
+        <div class="section-wrapper">
+            <section class="faq">
+                <div class="faq__container container">
+                    <h2 class="faq__title">
+                        Основные вопросы при трудоустройстве
+                    </h2>
+                    <div class="faq__list">
+                        <div class="faq__item">
+                            <div class="faq__header">
+                                Можно ли доставлять заказы на велосипеде, самокате или только пешком?
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__answer">Вы можете выполнять заказы удобным для Вас способом - пешком
+                                    или
+                                    использовать транспортное средство, в том числе личный автомобиль. Если вы хорошо
+                                    управляетесь с велосипедом, самокатом, роликами и другими средствами передвижения —
+                                    используйте их.
 
 
-                                Мы также предоставляем помощь в аренде авто и других транспортных средств.
+                                    Мы также предоставляем помощь в аренде авто и других транспортных средств.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="faq__item">
-                        <div class="faq__header">
-                            Можно ли выбирать удобный для себя график работы?
-                        </div>
-                        <div class="faq__content">
-                            <div class="faq__answer">Да, вы можете сами выбрать, когда Вам удобно выполнять заказы (от 2
-                                до 12 часов в сутки) и район доставки.
+                        <div class="faq__item">
+                            <div class="faq__header">
+                                Можно ли выбирать удобный для себя график работы?
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__answer">Да, вы можете сами выбрать, когда Вам удобно выполнять заказы
+                                    (от 2
+                                    до 12 часов в сутки) и район доставки.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="faq__item">
-                        <div class="faq__header">
-                            Какие документы необходимо представить, чтобы устроиться курьером?
-                        </div>
-                        <div class="faq__content">
-                            <div class="faq__answer">Гражданам РФ: паспорт с пропиской.
+                        <div class="faq__item">
+                            <div class="faq__header">
+                                Какие документы необходимо представить, чтобы устроиться курьером?
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__answer">Гражданам РФ: паспорт с пропиской.
 
-                                Гражданам Киргизии, Казахстана, Белоруссии, Армении: паспорт, регистрация, медицинская
-                                книжка, миграционная карта с целью въезда «Работа» (кроме граждан Белоруссии), СНИЛС,
-                                ИНН, ДМС (медицинская страховка).
+                                    Гражданам Киргизии, Казахстана, Белоруссии, Армении: паспорт, регистрация,
+                                    медицинская
+                                    книжка, миграционная карта с целью въезда «Работа» (кроме граждан Белоруссии),
+                                    СНИЛС,
+                                    ИНН, ДМС (медицинская страховка).
 
-                                Другое гражданство: паспорт, регистрация, медицинская книжка, миграционная карта с целью
-                                въезда «Работа», СНИЛС, ИНН, ДМС (медицинская страховка). А также ВНЖ, патент с чеками
-                                или РВП
-                                для города, в котором вы хотите работать.
+                                    Другое гражданство: паспорт, регистрация, медицинская книжка, миграционная карта с
+                                    целью
+                                    въезда «Работа», СНИЛС, ИНН, ДМС (медицинская страховка). А также ВНЖ, патент с
+                                    чеками
+                                    или РВП
+                                    для города, в котором вы хотите работать.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="faq__item">
-                        <div class="faq__header">
-                            Можно ли совмещать основную работу с работой курьера?
-                        </div>
-                        <div class="faq__content">
-                            <div class="faq__answer">Да, обычно курьеры могут совмещать основную работу с подработкой.
+                        <div class="faq__item">
+                            <div class="faq__header">
+                                Можно ли совмещать основную работу с работой курьера?
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__answer">Да, обычно курьеры могут совмещать основную работу с
+                                    подработкой.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="faq__item">
-                        <div class="faq__header">
-                            Какой фиксированный доход?
-                        </div>
-                        <div class="faq__content">
-                            <div class="faq__answer">52000 рублей при среднем количестве: 12 дней и 300 заказов.
+                        <div class="faq__item">
+                            <div class="faq__header">
+                                Какой фиксированный доход?
+                            </div>
+                            <div class="faq__content">
+                                <div class="faq__answer">52000 рублей при среднем количестве: 12 дней и 300 заказов.
 
-                                64000 рублей при среднем количестве: 16 дней и 400 заказов.
+                                    64000 рублей при среднем количестве: 16 дней и 400 заказов.
 
-                                80000 рублей при среднем количестве: 20 дней и 500 заказов.
+                                    80000 рублей при среднем количестве: 20 дней и 500 заказов.
 
-                                102000 рублей при среднем количестве: 24 дней и 600 заказов.
+                                    102000 рублей при среднем количестве: 24 дней и 600 заказов.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <section class="form">
             <div class="form-group">
                 <div class="form__container">
@@ -206,26 +250,27 @@
                         <button class="form-btn">Отправить</button>
                     </form>
                 </div>
-                <div class="form__image">
-                    <img class="form-logo" src="./images/iphone.png" alt="deli-logo">
-                </div>
+                <img class="form__img" src="./images/phone.png" alt="deli-logo">
+
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-group">
-            <div class="header__logo">
-                <p class="footer__logo-text">Работа курьером в Яндекс</p>
-                <img class="header__logo-ya" src="./images/logo-footer-ya.png" alt="Логотип яндекс">
-                <img class="header__logo-img" src="./images/delivery-logo.png" alt="Логотип деливери">
+    <div class="footer-wrapper">
+        <footer class="footer">
+            <div class="footer-group">
+                <div class="header__logo">
+                    <p class="footer__logo-text">Работа курьером в Яндекс</p>
+                    <img class="header__logo-ya" src="./images/logo-footer-ya.png" alt="Логотип яндекс">
+                    <img class="header__logo-img" src="./images/delivery-logo.png" alt="Логотип деливери">
+                </div>
+                <p class="footer-text">Официальный партнер Яндекс</p>
             </div>
-            <p class="footer-text">Официальный партнер Яндекс</p>
-        </div>
-        <div class="footer-phone__group">
-            <img class="footer-phone__group-img" src="./images/phone-icon.png" alt="icon">
-            <p class="footer-phone__group-text">+7 (999) 000-00-00</p>
-        </div>
-    </footer>
+            <div class="footer-phone__group">
+                <img class="footer-phone__group-img" src="./images/phone-icon.png" alt="icon">
+                <p class="footer-phone__group-text">+7 (999) 000-00-00</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

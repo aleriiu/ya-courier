@@ -5,6 +5,27 @@
     font-family: "Montserrat", sans-serif;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.header,
+section,
+.footer {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-wrapper {
+    width: 100%;
+    background-color: #EEEFF1;
+}
+
+.footer-wrapper {
+    width: 100%;
+    background-color: #333333;
+}
+
 /* header */
 
 .header {
@@ -39,16 +60,35 @@
     padding: 0.938rem 1.25rem;
     border: 1px solid #000000;
     border-radius: 0.75rem;
-    background-color: #ffffff;
+    background-color: transparent;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.063rem;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__btn:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: #FFE033;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in;
+}
+
+.header__btn:hover::after {
+    transform: translateY(0);
 }
 
 /* hero */
-
-.hero {
+.hero-bg {
     background-image: url(./images/hero-banner.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -75,6 +115,13 @@
     background-color: #FFE033;
     border: 1px solid #000000;
     border-radius: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+}
+
+.hero__btn:hover {
+    background-color: #EEEFF1;
 }
 
 /* description */
@@ -86,11 +133,12 @@
 
 .description-img {
     width: 40%;
+    border-radius: 16px;
 }
 
 .description__container {
     background-color: #EEEFF1;
-    border-radius: 1rem;
+    border-radius: 16px;
     display: flex;
     gap: 2.5rem;
 }
@@ -122,7 +170,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.375rem 1.375rem;
 }
 
 .advantages__card {
@@ -130,7 +178,7 @@
     padding: 1.25rem;
     gap: 1.25rem;
     background-color: #ffffff;
-    border-radius: 1rem;
+    border-radius: 16px;
     align-items: center;
     width: 32%;
 }
@@ -156,7 +204,7 @@
 .price-container {
     background-color: #FFE033;
     padding: 5rem 2.5rem;
-    border-radius: 0.75rem;
+    border-radius: 16px;
 }
 
 .tab-text {
@@ -169,7 +217,7 @@
 
 .price-group {
     display: flex;
-    gap: 1rem;
+    gap: 1.375rem;
     padding-top: 3rem;
 }
 
@@ -270,10 +318,43 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 /* for whom */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1.375rem;
+    grid-row-gap: 1.375rem;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+    .div3 { grid-area: 1 / 3 / 2 / 5; }
+    .div4 { grid-area: 2 / 1 / 3 / 3; }
+    .div5 { grid-area: 2 / 3 / 3 / 4; }
+    .div6 { grid-area: 2 / 4 / 3 / 5; }
 
 .for-whom {
     padding: 5rem 2.5rem;
 }
+
+.div-big,
+.div-small {
+    position: relative;
+}
+
+.div-big p,
+.div-small p {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.div-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
 
 .for-whom__header {
     color: #000000;
@@ -289,22 +370,7 @@ input[type="range"]:focus::-moz-range-thumb {
     gap: 1.5rem;
 }
 
-.for-whom__card {
-    background-image: url(./images/wide1.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 20%;
-}
-
-.for-whom__card-bar {
-    width: 60%;
-    background-image: url(./images/wide2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 .for-whom__card-text {
-    padding-top: 14.313rem;
     color: #ffffff;
     font-weight: 600;
     font-size: 1.5rem;
@@ -355,7 +421,15 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .faq__item:after {
-    content: '\02795';
+    content: '';
+    margin-top: 4px;
+    height: 15px;
+    width: 15px;
+    background-image: url(./images/plus-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* content: '\02795'; */
     /* Unicode character for "plus" sign (+) */
     font-size: 16px;
     color: #000000;
@@ -364,7 +438,14 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .active:after {
-    content: "\2573";
+    content: '';
+    height: 12px;
+    width: 12px;
+    background-image: url(./images/close-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* content: "\2573"; */
     /* Unicode character for "minus" sign (х) */
 }
 
@@ -391,17 +472,19 @@ input[type="range"]:focus::-moz-range-thumb {
 
 .form {
     padding: 5rem 2.5rem;
-    position: relative;
+    /* position: relative; */
 }
 
 .form-group {
     background-color: #FFE033;
-    border-radius: 1rem;
+    border-radius: 16px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .form__container {
+    width: 58%;
     padding-left: 6.688rem;
     display: flex;
     flex-direction: column;
@@ -410,8 +493,10 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 form {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.375rem;
 }
 
@@ -428,7 +513,7 @@ form {
 .form__text {
     display: flex;
     flex-direction: column;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     padding: 0.625rem 0.938rem;
     gap: 0.625rem;
     border: 0px solid #ffffff;
@@ -442,8 +527,8 @@ form {
     color: #000000;
 }
 
-input[type=text] {
-    width: 500px;
+.form__text{
+    width: 100%;
 }
 
 :focus::-webkit-input-placeholder {
@@ -465,15 +550,18 @@ input[type=text] {
 .form-btn {
     background-color: #000000;
     color: #ffffff;
-    padding: 0.938rem 2.5rem;
-    border-radius: 0.75rem;
+    padding: 0.938rem 4.75rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
-.form__image {
+.form__img {
     position: absolute;
-    top: 34px;
-    transform: translateX(105%);
-    left: 0;
+    height: 420px;
+    right: 6.668rem;
+    bottom: -1px;
 }
 
 .form-logo {
