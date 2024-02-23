@@ -785,7 +785,7 @@ form {
 @media (max-width: 790px) {
 
     .header {
-        padding: 0.875rem 0.8rem;
+        padding: 0.875rem 1rem;
         flex-direction: row;
         gap: 0.5rem;
     }
@@ -820,8 +820,8 @@ form {
 
     .form__container {
         width: 100%;
-        padding-left: 1.688rem;
-        padding-right: 1.688rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .modal_menu-form__img {
@@ -937,6 +937,16 @@ form {
         bottom: 0.6rem;
     }
 
+    .faq__item {
+        padding: 1rem;
+    }
+
+    
+.faq__item:after {
+    right: 16px;
+    margin-top: 2px;
+}
+
     .faq__header {
         font-size: 0.9rem;
         line-height: 1rem;
@@ -960,9 +970,9 @@ form {
         line-height: 2rem;
     }
 
-    .footer {
-        flex-direction: column;
-        gap: 0.8rem; 
+    .form-btn {
+        font-size: 1rem;
+        padding: 0.738rem 2rem;
     }
 
     .for-whom__cards {
@@ -980,6 +990,14 @@ form {
         .card5 { grid-area: 4 / 1 / 5 / 2; }
         .card6 { grid-area: 4 / 2 / 5 / 3; }
 
+        .footer {
+            flex-direction: column;
+            gap: 1.4rem; 
+        }
+
+.footer-group {
+    align-items: center;
+}
 }
 
 @media (max-width: 380px) {
