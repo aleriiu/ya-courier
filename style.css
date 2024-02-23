@@ -740,7 +740,10 @@ form {
         flex-wrap: wrap;
     }
 
-    .slider__input, #days, #orders, #salary {
+    .slider__input,
+    #days,
+    #orders,
+    #salary {
         width: 100%;
     }
 
@@ -767,4 +770,37 @@ form {
     .form__container-mob {
         width: 69%;
     }
+}
+
+@media (max-width: 790px) {
+
+    .header {
+        padding: 0.875rem 0.8rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header__logo-text {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .header__logo-ya {
+        width: 20px;
+    }
+
+    .header__logo-img {
+        width: 26px;
+    }
+
+    .header__btn {
+        padding: 0.738rem 0.9rem;
+    }
+
+    .form__container {
+        width: 100%;
+        padding-left: 1.688rem;
+        padding-right: 1.688rem;
+    }
+
 }
