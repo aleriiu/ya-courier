@@ -20,7 +20,32 @@
             <img class="header__logo-ya" src="./images/ya-logo.png" alt="Логотип яндекс">
             <img class="header__logo-img" src="./images/delivery-logo.png" alt="Логотип деливери">
         </div>
-        <button class="header__btn">Свяжитесь с нами</button>
+        <div>
+            <!-- <button class="header__btn">Свяжитесь с нами</button> -->
+            <div id="mob-menu" class="mob-menu">
+                <button class="header__btn">Свяжитесь с нами</button>
+                <div class="section-burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="modal_menu__wrapper" class="modal_menu__wrapper">
+                <div id="modal_menu" class="form-group modal_menu__container">
+                    <div id="close">&times;</div>
+                    <div class="form__container">
+                        <p class="form__container-title form__container-title_padding">Позвоните нам</p>
+                        <p class="form__container-title padding">или закажите звонок</p>
+                        <form action="">
+                            <input class="form__text" type="text" placeholder="ФИО">
+                            <input class="form__text" type="tel" placeholder="Телефон">
+                            <button class="form-btn">Отправить</button>
+                        </form>
+                    </div>
+                    <img class="form__img modal_menu-form__img" src="./images/phone.png" alt="deli-logo">
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -98,59 +123,33 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="for-whom">
-            <h2 class="for-whom__header">Кому подойдет работа в сервисах доставки
-                Яндекс и Delivery Club</h2>
-            <div class="for-whom__cards">
-                <div class="for-whom__card">
-                    <p class="for-whom__card-text">Велокурьеры</p>
-                </div>
-                <div class="for-whom__card for-whom__card-bar">
-                    <p class="for-whom__card-text">Велокурьеры</p>
-                </div>
-                <div class="for-whom__card">
-                    <p class="for-whom__card-text">Велокурьеры</p>
-                </div>
-            </div>
-            <div class="for-whom__cards">
-                <div class="for-whom__card for-whom__card-bar">
-                    <p class="for-whom__card-text">Велокурьеры</p>
-                </div>
-                <div class="for-whom__card">
-                    <p class="for-whom__card-text">Велокурьеры</p>
-                </div>
-                <div class="for-whom__card">
-                    <p class="for-whom__card-text">Велокурьеры</p>
-                </div>
-            </div>
-        </section> -->
         <section class="for-whom">
             <h2 class="for-whom__header">Кому подойдет работа в сервисах доставки
                 Яндекс и Delivery Club</h2>
-            <div class="parent">
-                <div class="div1 div-small">
-                    <img class="div-img" src="./images/wide1.png" alt="">
+            <div class="for-whom__cards">
+                <div class="card1 for-whom__card-small">
+                    <img class="for-whom__card-img" src="./images/wide1.png" alt="Велокурьеры">
                     <p class="for-whom__card-text">Велокурьеры</p>
                 </div>
-                <div class="div2 div-small">
-                    <img class="div-img" src="./images/wide1.png" alt="">
-                    <p class="for-whom__card-text">Велокурьеры</p>
+                <div class="card2 for-whom__card-small">
+                    <img class="for-whom__card-img" src="./images/wide3.png" alt="Мотокурьеры">
+                    <p class="for-whom__card-text">Мотокурьеры</p>
                 </div>
-                <div class="div3 div-big">
-                    <img class="div-img" src="./images/wide2.png" alt="">
-                    <p class="for-whom__card-text">Велокурьеры</p>
+                <div class="card3 for-whom__card-big">
+                    <img class="for-whom__card-img" src="./images/wide2.png" alt="Курьеры на автомобиле">
+                    <p class="for-whom__card-text">Курьеры на автомобиле</p>
                 </div>
-                <div class="div4 div-big">
-                    <img class="div-img" src="./images/wide2.png" alt="">
-                    <p class="for-whom__card-text">Велокурьеры</p>
+                <div class="card4 for-whom__card-big">
+                    <img class="for-whom__card-img" src="./images/wide4.png" alt="Пешие курьеры">
+                    <p class="for-whom__card-text">Пешие курьеры</p>
                 </div>
-                <div class="div5 div-small">
-                    <img class="div-img" src="./images/wide1.png" alt="">
-                    <p class="for-whom__card-text">Велокурьеры</p>
+                <div class="card5 for-whom__card-small">
+                    <img class="for-whom__card-img" src="./images/wide5.png" alt="Студенты">
+                    <p class="for-whom__card-text">Студенты</p>
                 </div>
-                <div class="div6 div-small">
-                    <img class="div-img" src="./images/wide1.png" alt="">
-                    <p class="for-whom__card-text">Велокурьеры</p>
+                <div class="card6 for-whom__card-small">
+                    <img class="for-whom__card-img" src="./images/wide6.png" alt="Самозанятые">
+                    <p class="for-whom__card-text">Самозанятые</p>
                 </div>
             </div>
         </section>
@@ -251,7 +250,6 @@
                     </form>
                 </div>
                 <img class="form__img" src="./images/phone.png" alt="deli-logo">
-
             </div>
         </section>
     </main>
