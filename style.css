@@ -46,6 +46,13 @@ a {
     gap: 0.25rem;
 }
 
+.header__logo-images {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center; 
+}
+
 .header__logo-text {
     font-weight: 600;
     font-size: 1.5rem;
@@ -90,6 +97,10 @@ a {
 
 .header__btn:hover::after {
     transform: translateY(0);
+}
+
+.header__btn-img {
+    display: none;
 }
 
 /* modal window */
@@ -155,7 +166,7 @@ a {
 .hero__btn {
     padding: 0.938rem 2.5rem;
     background-color: #FFE033;
-    border: 1px solid #000000;
+    border: none;
     border-radius: 0.75rem;
     font-size: 1.25rem;
     font-weight: 600;
@@ -775,14 +786,24 @@ form {
 
     .header {
         padding: 0.875rem 0.8rem;
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
     }
 
+    .header__logo {
+        flex-direction: row-reverse;
+    }
+
+
     .header__logo-text,
     .footer__logo-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.5rem;
+    }
+
+    .header__btn-img {
+        display: flex;
+        width: 26px;
     }
 
     .header__logo-ya {
@@ -794,7 +815,7 @@ form {
     }
 
     .header__btn {
-        padding: 0.738rem 0.9rem;
+        display: none;
     }
 
     .form__container {
@@ -825,7 +846,7 @@ form {
     }
 
     .hero__group {
-        padding: 4.25rem 0 4.25rem 2.5rem;
+        padding: 4.25rem 0 4.25rem 1rem;
     }
 
     .hero__btn {
@@ -841,7 +862,11 @@ form {
     .faq,
     .form,
     .footer {
-        padding: 1.5rem 0.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .description__container-text {
+        font-size: 0.75rem;
     }
 
     .advantages-header,
@@ -864,8 +889,23 @@ form {
 
     .advantages__card {
         flex-direction: column;
-        width: 46%;
+        width: 100%;
     }
+
+    .advantages__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+        
+        .advantages__card1 { grid-area: 1 / 1 / 2 / 2; }
+        .advantages__card2 { grid-area: 1 / 2 / 2 / 3; }
+        .advantages__card3 { grid-area: 2 / 1 / 3 / 2; }
+        .advantages__card4 { grid-area: 2 / 2 / 3 / 3; }
+        .advantages__card5 { grid-area: 3 / 1 / 4 / 2; }
+        .advantages__card6 { grid-area: 3 / 2 / 4 / 3; }
 
     .slider__input,
     #days,
@@ -882,6 +922,11 @@ form {
         height: 1.3rem;
         width: 1.3rem;
         margin-top: -8px;
+    }
+
+    .for-whom__card-text {
+        font-size: 1rem;
+        bottom: 0.6rem;
     }
 
     .faq__header {
@@ -912,41 +957,19 @@ form {
         gap: 0.8rem; 
     }
 
-    .footer-phone__group-text {
-        font-size: 1rem;
-    }
-
-    .for-whom__card-text {
-        font-size: 1rem;
-    }
-
     .for-whom__cards {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-    }
-
-    .card1 {
-        grid-area: 2 / 3 / 3 / 2;
-    }
-
-    .card2 {
-        grid-area: 1 / 3 / 2 / 3;
-    }
-
-    .card3 {
-        grid-area: 2 / 3 / 2 / 5;
-    }
-    
-    .card4 {
-        grid-area: 3 / 5 / 3 / 3;
-    }
-
-    .card5 {
-        grid-area: 4 / 4 / 4 / 4;
-    }
-
-    .card6 {
-        grid-area: 4 / 4 / 4 / 3;
-    }
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+        
+        .card1 { grid-area: 1 / 1 / 2 / 2; }
+        .card2 { grid-area: 1 / 2 / 2 / 3; }
+        .card3 { grid-area: 2 / 1 / 3 / 3; }
+        .card4 { grid-area: 3 / 1 / 4 / 3; }
+        .card5 { grid-area: 4 / 1 / 5 / 2; }
+        .card6 { grid-area: 4 / 2 / 5 / 3; }
 
 }
