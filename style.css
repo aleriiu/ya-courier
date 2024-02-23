@@ -284,7 +284,7 @@ a {
 
 .slider__input-month {
     width: 100%;
-    margin-bottom: -7px;
+    margin-bottom: -8px;
 }
 
 /********** Стили диапазонного элемента ввода (слайдера) **********/
@@ -295,7 +295,6 @@ input[type="range"] {
     background: #EEEFF1;
     cursor: pointer;
     width: 100%;
-    border-radius: 15%;
 }
 
 /* Удаляем фокусировку по умолчанию */
