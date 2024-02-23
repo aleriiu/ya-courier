@@ -26,6 +26,11 @@ section,
     background-color: #333333;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* header */
 
 .header {
@@ -642,6 +647,8 @@ form {
     color: #ffffff;
 }
 
+/* modal menu - переназначение классов */
+
 .form__container-title_padding {
     padding-top: 0;
     padding-bottom: 0;
@@ -653,6 +660,14 @@ form {
 }
 
 .modal_menu-form__img {
-    height: 438px;
-    right: 5.668rem;
+    height: 474px;
+    right: 3.9rem;
+}
+
+.modal-group {
+    justify-content: center;
+}
+
+.phone__group-modal {
+    color: #000000;
 }
