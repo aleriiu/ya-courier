@@ -981,3 +981,13 @@ form {
         .card6 { grid-area: 4 / 2 / 5 / 3; }
 
 }
+
+@media (max-width: 380px) {
+    .slider__input {
+        padding-left: 15px 4px;
+    }
+
+    .slider__input span {
+        padding-left: 2px !important;
+    }
+}
