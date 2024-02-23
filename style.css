@@ -292,9 +292,10 @@ a {
 input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
-    background: transparent;
+    background: #EEEFF1;
     cursor: pointer;
     width: 100%;
+    border-radius: 15%;
 }
 
 /* Удаляем фокусировку по умолчанию */
@@ -334,7 +335,8 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /******** Стили для Firefox ********/
 /* дорожка слайдера */
 input[type="range"]::-moz-range-track {
-    background-color: #000000;;
+    background-color: #000000;
+    ;
     border-radius: 0.5rem;
     height: 0.5rem;
 }
@@ -366,14 +368,31 @@ input[type="range"]:focus::-moz-range-thumb {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1.375rem;
     grid-row-gap: 1.375rem;
-    }
-    
-    .card1 { grid-area: 1 / 1 / 2 / 2; }
-    .card2 { grid-area: 1 / 2 / 2 / 3; }
-    .card3 { grid-area: 1 / 3 / 2 / 5; }
-    .card4 { grid-area: 2 / 1 / 3 / 3; }
-    .card5 { grid-area: 2 / 3 / 3 / 4; }
-    .card6 { grid-area: 2 / 4 / 3 / 5; }
+}
+
+.card1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.card2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.card3 {
+    grid-area: 1 / 3 / 2 / 5;
+}
+
+.card4 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.card5 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.card6 {
+    grid-area: 2 / 4 / 3 / 5;
+}
 
 .for-whom {
     padding: 5rem 2.5rem;
@@ -559,7 +578,7 @@ form {
     color: #000000;
 }
 
-.form__text{
+.form__text {
     width: 100%;
 }
 
@@ -670,4 +689,83 @@ form {
 
 .phone__group-modal {
     color: #000000;
+}
+
+@media (min-width: 1441px) {
+    .section {
+        margin: 0.75rem auto 0 auto;
+    }
+
+    .footer-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero-bg {
+        background-position-x: center;
+    }
+
+    .hero__group {
+        width: 90%;
+    }
+
+    .hero__text {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .description__container {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .description-img {
+        width: 100%;
+    }
+
+    .description__container-text {
+        padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    }
+
+    .advantages,
+    .price-container {
+        padding: 4rem 2.5rem;
+    }
+
+    .advantages__card {
+        width: 48%;
+    }
+
+    .price-group {
+        flex-wrap: wrap;
+    }
+
+    .slider__input, #days, #orders, #salary {
+        width: 100%;
+    }
+
+    .for-whom__header {
+        width: 100%;
+    }
+
+    .form__img {
+        height: 350px;
+        right: 1.668rem;
+    }
+
+    .form__container {
+        width: 55%;
+        padding-left: 3.688rem;
+        padding-right: 3.688rem;
+    }
+
+    .modal_menu-form__img {
+        height: 307px;
+        right: -3.332rem;
+    }
+
+    .form__container-mob {
+        width: 69%;
+    }
 }

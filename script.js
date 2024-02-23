@@ -32,25 +32,25 @@ slider.addEventListener("input", function() {
 
   switch(value) {
     case 1:
-      slider.style.cssText  = 'background: linear-gradient(to right, black 0%, transparent 0%);'
+      slider.style.cssText  = 'background: linear-gradient(to right, black 0%, #EEEFF1 0%);'
       days.textContent = "12";
       salary.innerHTML = "52&nbsp;000&nbsp;₽";
       orders.textContent = "300";
       break;
     case 2:
-      slider.style.cssText  = 'background: linear-gradient(to right, black 33%, transparent 33%);'
+      slider.style.cssText  = 'background: linear-gradient(to right, black 33%, #EEEFF1 33%);'
       days.textContent = "16";
       salary.innerHTML = "64&nbsp;000&nbsp;₽";
       orders.textContent = "400";
       break;
     case 3:
-      slider.style.cssText  = 'background: linear-gradient(to right, black 66%, transparent 66%);'
+      slider.style.cssText  = 'background: linear-gradient(to right, black 66%, #EEEFF1 66%);'
       days.textContent = "20";
       salary.innerHTML = "80&nbsp;000&nbsp;₽";
       orders.textContent = "500";
       break;
     case 4:
-      slider.style.cssText  = 'background: linear-gradient(to right, black 100%, transparent 100%);'
+      slider.style.cssText  = 'background: linear-gradient(to right, black 100%, #EEEFF1 100%);'
       days.textContent = "24";
       salary.innerHTML = "102&nbsp;000&nbsp;₽";
       orders.textContent = "600";
