@@ -80,12 +80,16 @@ mainForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nameInput = mainForm.querySelector('#main-form_name');
-    const dateInput = mainForm.querySelector('#main-form_date');
+    let dateInput = mainForm.querySelector('#main-form_date');
     const phoneInput = mainForm.querySelector('#main-form_phone');
+
+    let birthDate = new Date(dateInput.value)
+
+    birthDate.toLocaleString('ru');
     
     const url = 'https://api.telegram.org/bot7045749206:AAGOxShzwlm9wrC1Fhfk6U7KlJ_cz5azrt4/sendMessage';
 
-    const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${dateInput.value}\r\nТелефон: ${phoneInput.value}`;
+    const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${birthDate.getDate()}.${birthDate.getMonth() + 1}.${birthDate.getFullYear()}\r\nТелефон: ${phoneInput.value}`;
 
     const formData = new FormData();
     formData.append('chat_id', 259046312);

@@ -166,11 +166,16 @@ a {
 .hero__btn {
     padding: 0.938rem 2.5rem;
     background-color: #FFE033;
+    color: #000000;
     border: none;
     border-radius: 0.75rem;
+    transition: all 0.3s ease-in;
+}
+
+.hero__btn a {
     font-size: 1.25rem;
     font-weight: 600;
-    transition: all 0.3s ease-in;
+    color: #000000;
 }
 
 .hero__btn:hover {
@@ -892,8 +897,12 @@ input[type="date"] {
     }
 
     .hero__btn {
-        font-size: 1rem;
+        
         padding: 0.738rem 1.5rem;
+    }
+
+    .hero__btn a {
+        font-size: 1rem;
     }
 
     .description,
