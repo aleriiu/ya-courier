@@ -131,11 +131,11 @@ a {
 }
 
 #close {
-    display: flex;
+    right: 12px;
+    top: 12px;
+    position: absolute;
     color: #000000;
     font-size: 5rem;
-    justify-content: flex-end;
-    align-items: center;
     line-height: 0.6;
     cursor: pointer;
 }
@@ -151,12 +151,12 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 60%;
     padding: 9.25rem 0 9.25rem 2.5rem;
     gap: 2rem;
 }
 
 .hero__text {
+    width: 47rem;
     font-weight: 700;
     font-size: 2.5rem;
     line-height: 3rem;
@@ -536,6 +536,7 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .form-group {
+    max-width: 1200px;
     background-color: #FFE033;
     border-radius: 16px;
     display: flex;
@@ -548,8 +549,8 @@ input[type="range"]:focus::-moz-range-thumb {
     padding-left: 6.688rem;
     display: flex;
     flex-direction: column;
-    padding-bottom: 2.875rem;
-    padding-right: 6.688rem;
+    padding: 2.875rem 6.688rem;
+    gap: 1.25rem;
 }
 
 form {
@@ -565,14 +566,14 @@ form {
     font-size: 2rem;
     line-height: 2.438rem;
     font-weight: 700;
-    padding-bottom: 1.875rem;
-    padding-top: 2.313rem;
     text-align: center;
 }
 
 .form__text {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
     border-radius: 12px;
     padding: 0.625rem 0.938rem;
     gap: 0.625rem;
@@ -587,8 +588,20 @@ form {
     color: #000000;
 }
 
+input[type="date"] {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
 .form__text {
     width: 100%;
+    font-size: 1rem;
+}
+
+.form__text::placeholder {
+    vertical-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
 }
 
 :focus::-webkit-input-placeholder {
@@ -660,8 +673,12 @@ form {
 
 .footer-phone__group {
     display: flex;
-    gap: 0.625rem;
+    gap: 0.5rem;
     align-items: center;
+}
+
+.footer-phone__group-img-link {
+    font-size: 0px;
 }
 
 .footer-phone__group-img {
@@ -689,7 +706,7 @@ form {
 
 .modal_menu-form__img {
     height: 474px;
-    right: 3.9rem;
+    right: 6rem;
 }
 
 .modal-group {
@@ -722,6 +739,7 @@ form {
     .hero__text {
         font-size: 2rem;
         line-height: 2.5rem;
+        width: 42.5rem;
     }
 
     .description__container {
@@ -761,6 +779,10 @@ form {
         width: 100%;
     }
 
+    .for-whom__card-text {
+        font-size: 1.25rem;
+    }
+
     .form__img {
         height: 350px;
         right: 1.668rem;
@@ -772,13 +794,28 @@ form {
         padding-right: 3.688rem;
     }
 
+    .modal_menu__container {
+        width: 700px;
+    }
+
     .modal_menu-form__img {
         height: 307px;
-        right: -3.332rem;
+        right: 2rem;
+    }
+
+    .form__container-title {
+        font-size: 1.6rem;
     }
 
     .form__container-mob {
-        width: 69%;
+        width: 55%;
+        padding: 2rem !important;
+        gap: 1rem !important;
+    }
+
+    .form__container-title-mob {
+        line-height: 1.5rem !important;
+    font-size: 1.5rem !important;
     }
 }
 
@@ -828,6 +865,10 @@ form {
         display: none;
     }
 
+    #close {
+        font-size: 3rem;
+    }
+
     .footer-phone__group-text {
         font-size: 0.9rem;
     }
@@ -843,6 +884,7 @@ form {
     .hero__text {
         font-size: 1.5rem;
         line-height: 1.5rem;
+        width: 87%;
     }
 
     .hero__group {
@@ -861,6 +903,7 @@ form {
     .for-whom,
     .faq,
     .form,
+    .form__container,
     .footer {
         padding: 2rem 1rem;
     }
@@ -997,6 +1040,10 @@ form {
 
 .footer-group {
     align-items: center;
+}
+
+.footer-phone__group {
+    gap: 0.5rem;
 }
 }
 

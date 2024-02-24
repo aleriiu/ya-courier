@@ -71,3 +71,65 @@ mobMenu.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     modalMenu.style.display = 'none';
 })
+
+// main form
+
+const mainForm = document.querySelector('#main-form');
+
+mainForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nameInput = mainForm.querySelector('#main-form_name');
+    const dateInput = mainForm.querySelector('#main-form_date');
+    const phoneInput = mainForm.querySelector('#main-form_phone');
+    
+    const url = 'https://api.telegram.org/bot7045749206:AAGOxShzwlm9wrC1Fhfk6U7KlJ_cz5azrt4/sendMessage';
+
+    const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${dateInput.value}\r\nТелефон: ${phoneInput.value}`;
+
+    const formData = new FormData();
+    formData.append('chat_id', 259046312);
+    formData.append('parse_mode', 'Markdown');
+    formData.append('text', text);
+
+    const response = await fetch(url, {
+        method: 'POST',
+        body: formData
+    });
+
+    nameInput.value = '';
+    phoneInput.value = '';
+    dateInput.value ='';
+
+    alert('Заявка отправлена!');
+})
+
+//modal form
+
+const modalForm = document.querySelector('#modal-form');
+
+modalForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nameInput = modalForm.querySelector('#modal-form_name');
+    const phoneInput = modalForm.querySelector('#modal-form_phone');
+    
+    const url = 'https://api.telegram.org/bot7045749206:AAGOxShzwlm9wrC1Fhfk6U7KlJ_cz5azrt4/sendMessage';
+
+    const text = `Заказ звонка\r\n\r\nФИО: ${nameInput.value}\r\nТелефон: ${phoneInput.value}`;
+
+    const formData = new FormData();
+    formData.append('chat_id', 259046312);
+    formData.append('parse_mode', 'Markdown');
+    formData.append('text', text);
+
+    const response = await fetch(url, {
+        method: 'POST',
+        body: formData
+    });
+
+    nameInput.value = '';
+    phoneInput.value = '';
+
+    alert('Заявка отправлена!');
+})

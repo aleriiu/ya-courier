@@ -48,19 +48,19 @@
                 <div id="modal_menu" class="form-group modal_menu__container">
                     <div id="close">&times;</div>
                     <div class="form__container form__container-mob">
-                        <p class="form__container-title form__container-title_padding">Позвоните нам</p>
+                        <p class="form__container-title form__container-title-mob form__container-title_padding">Позвоните нам</p>
                         <div class="footer-phone__group modal-group">
-                            <a href="#"><img class="footer-phone__group-img" src="./images/watsapp-icon-black.png"
+                            <a class="footer-phone__group-img-link" href="#"><img class="footer-phone__group-img" src="./images/watsapp-icon-black.png"
                                     alt="icon"></a>
-                            <a href="#"><img class="footer-phone__group-img" src="./images/telegram-icon-black 1.png"
+                            <a class="footer-phone__group-img-link" href="#"><img class="footer-phone__group-img" src="./images/telegram-icon-black 1.png"
                                     alt="icon"></a>
-                            <a class="footer-phone__group-text phone__group-modal" href="tel:+79990000000">+7 (999)
-                                000-00-00</a>
+                            <a class="footer-phone__group-text phone__group-modal" href="tel:+79522212844">+7 (952)
+                                221-28-44</a>
                         </div>
-                        <p class="form__container-title padding">или закажите звонок</p>
-                        <form action="">
-                            <input class="form__text" type="text" placeholder="ФИО">
-                            <input class="form__text" type="tel" placeholder="Телефон">
+                        <p class="form__container-title form__container-title-mob">или закажите звонок</p>
+                        <form action="" id="modal-form">
+                            <input id="modal-form_name" class="form__text" type="text" placeholder="ФИО" required>
+                            <input id="modal-form_phone" class="form__text" type="number" placeholder="Телефон" required>
                             <button class="form-btn">Отправить</button>
                         </form>
                     </div>
@@ -260,14 +260,14 @@
                 </div>
             </section>
         </div>
-        <section class="form">
+        <section class="form" id="main-form">
             <div class="form-group">
                 <div class="form__container">
                     <p class="form__container-title">Оставить заявку</p>
                     <form action="">
-                        <input class="form__text" type="text" placeholder="ФИО">
-                        <input class="form__text" type="number" placeholder="Дата рождения">
-                        <input class="form__text" type="tel" placeholder="Телефон">
+                        <input id="main-form_name" class="form__text" type="text" placeholder="ФИО" required>
+                        <input id="main-form_date" class="form__text" type="text" placeholder="Дата рождения" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" required>
+                        <input id="main-form_phone" class="form__text" type="number" placeholder="Телефон"  required>
                         <button class="form-btn">Отправить</button>
                     </form>
                 </div>
@@ -286,9 +286,9 @@
                 <p class="footer-text">Официальный партнер Яндекс</p>
             </div>
             <div class="footer-phone__group">
-                <a href=""><img class="footer-phone__group-img" src="./images/watsapp-white-icon.png" alt="icon"></a>
-                <a href=""><img class="footer-phone__group-img" src="./images/telegram-white-icon.png" alt="icon"></a>
-                <a class="footer-phone__group-text" href="tel:+79990000000">+7 (999) 000-00-00</a>
+                <a class="footer-phone__group-img-link" href="https://wa.me/79522212844"><img class="footer-phone__group-img" src="./images/watsapp-white-icon.png" alt="icon"></a>
+                <a class="footer-phone__group-img-link" href="https://t.me/+79522212844"><img class="footer-phone__group-img" src="./images/telegram-white-icon.png" alt="icon"></a>
+                <a class="footer-phone__group-text" href="tel:+79522212844">+7 (952) 221-28-44</a>
             </div>
         </footer>
     </div>
