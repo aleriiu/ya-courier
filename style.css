@@ -649,13 +649,14 @@ input[type="date"] {
 .radio-inputs-wrapper {
     align-items: flex-start;
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .radio-inputs {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
+    border: none;
 }
 
 .input-item {

@@ -75,48 +75,48 @@ closeBtn.addEventListener('click', () => {
 // main form
 
 const mainForm = document.querySelector('#main-form');
+const nameInput = mainForm.querySelector('#main-form_name');
+let dateInput = mainForm.querySelector('#main-form_date');
+const radioAutoInput = mainForm.querySelector('#main-form_radio-auto');
+const radioWalkInput = mainForm.querySelector('#main-form_radio-walk');
+const phoneInput = mainForm.querySelector('#main-form_phone');
+
+let dateInputMask = function dateInputMask(elm) {
+  elm.addEventListener('keypress', function (e) {
+    if (e.keyCode < 47 || e.keyCode > 57) {
+      e.preventDefault();
+    }
+
+    let len = elm.value.length;
+
+    // If we're at a particular place, let the user type the slash
+    // i.e., 12.12.1212
+    if (len !== 1 || len !== 3) {
+      if (e.keyCode == 47) {
+        e.preventDefault();
+      }
+    }
+
+    // If they don't add the slash, do it for them...
+    if (len === 2) {
+      elm.value += '.';
+    }
+
+    // If they don't add the slash, do it for them...
+    if (len === 5) {
+      elm.value += '.';
+    }
+  });
+};
+
+dateInputMask(dateInput);
 
 mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const nameInput = mainForm.querySelector('#main-form_name');
-  let dateInput = mainForm.querySelector('#main-form_date');
-  const phoneInput = mainForm.querySelector('#main-form_phone');
-
-  let dateInputMask = function dateInputMask(elm) {
-    elm.addEventListener('keypress', function (e) {
-      if (e.keyCode < 47 || e.keyCode > 57) {
-        e.preventDefault();
-      }
-
-      let len = elm.value.length;
-
-      // If we're at a particular place, let the user type the slash
-      // i.e., 12.12.1212
-      if (len !== 1 || len !== 3) {
-        if (e.keyCode == 47) {
-          e.preventDefault();
-        }
-      }
-
-      // If they don't add the slash, do it for them...
-      if (len === 2) {
-        elm.value += '.';
-      }
-
-      // If they don't add the slash, do it for them...
-      if (len === 5) {
-        elm.value += '.';
-      }
-    });
-  };
-
-  dateInputMask(dateInput);
-
-
   const url = 'https://api.telegram.org/bot7045749206:AAGOxShzwlm9wrC1Fhfk6U7KlJ_cz5azrt4/sendMessage';
 
-  const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${dateInput.value}\r\nТелефон: ${phoneInput.value}`;
+  const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${dateInput.value}\r\nТип работы: ${radioAutoInput.value} ${radioWalkInput.value}\r\nТелефон: ${phoneInput.value}`;
 
   const formData = new FormData();
   formData.append('chat_id', 298658489);
