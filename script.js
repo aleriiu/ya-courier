@@ -92,7 +92,7 @@ mainForm.addEventListener('submit', async (e) => {
     const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${birthDate.getDate()}.${birthDate.getMonth() + 1}.${birthDate.getFullYear()}\r\nТелефон: ${phoneInput.value}`;
 
     const formData = new FormData();
-    formData.append('chat_id', 259046312);
+    formData.append('chat_id', 298658489);
     formData.append('parse_mode', 'Markdown');
     formData.append('text', text);
 
@@ -123,7 +123,7 @@ modalForm.addEventListener('submit', async (e) => {
     const text = `Заказ звонка\r\n\r\nФИО: ${nameInput.value}\r\nТелефон: ${phoneInput.value}`;
 
     const formData = new FormData();
-    formData.append('chat_id', 259046312);
+    formData.append('chat_id', 298658489);
     formData.append('parse_mode', 'Markdown');
     formData.append('text', text);
 
