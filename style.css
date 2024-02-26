@@ -646,6 +646,29 @@ input[type="date"] {
     width: 46%;
 }
 
+.radio-inputs-wrapper {
+    align-items: flex-start;
+    display: flex;
+    gap: 5px;
+}
+
+.radio-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-item {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.input-item label {
+    line-height: 12px;
+}
+
+
 /* footer */
 
 .footer {
@@ -825,6 +848,14 @@ input[type="date"] {
 }
 
 @media (max-width: 790px) {
+
+    .radio-inputs-wrapper {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 0.938rem;
+    }
 
     .header {
         padding: 0.875rem 1rem;
