@@ -77,8 +77,6 @@ closeBtn.addEventListener('click', () => {
 const mainForm = document.querySelector('#main-form');
 const nameInput = mainForm.querySelector('#main-form_name');
 let dateInput = mainForm.querySelector('#main-form_date');
-const radioAutoInput = mainForm.querySelector('#main-form_radio-auto');
-const radioWalkInput = mainForm.querySelector('#main-form_radio-walk');
 const phoneInput = mainForm.querySelector('#main-form_phone');
 
 let dateInputMask = function dateInputMask(elm) {
@@ -114,12 +112,15 @@ dateInputMask(dateInput);
 mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  let radioInput = mainForm.querySelector('input[name=type]:checked').value;
+console.log(`radio: ${radioInput}`);
+
   const url = 'https://api.telegram.org/bot7045749206:AAGOxShzwlm9wrC1Fhfk6U7KlJ_cz5azrt4/sendMessage';
 
-  const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${dateInput.value}\r\nТип работы: ${radioAutoInput.value} ${radioWalkInput.value}\r\nТелефон: ${phoneInput.value}`;
+  const text = `Сообщение из формы\r\n\r\nФИО: ${nameInput.value}\r\nДата рождения: ${dateInput.value}\r\nТип работы: ${radioInput}\r\nТелефон: ${phoneInput.value}`;
 
   const formData = new FormData();
-  formData.append('chat_id', 298658489);
+  formData.append('chat_id', 259046312);
   formData.append('parse_mode', 'Markdown');
   formData.append('text', text);
 
