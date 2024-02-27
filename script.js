@@ -112,39 +112,6 @@ let dateInputMask = function dateInputMask(elm) {
 
 }
 
-// let dateInputMask = function dateInputMask(elm) {
-//   elm.addEventListener('keydown', function (e) {
-//     if (e.keyCode !== 8 || e.keyCode !== 46) {
-
-
-
-//     if (e.keyCode < 46 || e.keyCode > 57) {
-//       e.preventDefault();
-//     }
-
-//     let len = elm.value.length;
-
-//     // If we're at a particular place, let the user type the slash
-//     // i.e., 12.12.1212
-//     if (len !== 1 || len !== 3) {
-//       if (e.keyCode == 47) {
-//         e.preventDefault();
-//       }
-//     }
-
-//     // If they don't add the slash, do it for them...
-//     if (len === 2) {
-//       elm.value += '.';
-//     }
-
-//     // If they don't add the slash, do it for them...
-//     if (len === 5) {
-//       elm.value += '.';
-//     }
-//   }
-//   });
-// };
-
 dateInputMask(dateInput);
 
 mainForm.addEventListener('submit', async (e) => {
@@ -189,7 +156,7 @@ modalForm.addEventListener('submit', async (e) => {
   const text = `Заказ звонка\r\n\r\nФИО: ${nameInput.value}\r\nТелефон: ${phoneInput.value}`;
 
   const formData = new FormData();
-  formData.append('chat_id', 298658489);
+  formData.append('chat_id', 259046312);
   formData.append('parse_mode', 'Markdown');
   formData.append('text', text);
 
