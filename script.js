@@ -80,7 +80,7 @@ let dateInput = mainForm.querySelector('#main-form_date');
 const phoneInput = mainForm.querySelector('#main-form_phone');
 
 let dateInputMask = function dateInputMask(elm) {
-  elm.addEventListener('keypress', function (e) {
+  elm.addEventListener('keydown', function (e) {
     if (e.keyCode < 47 || e.keyCode > 57) {
       e.preventDefault();
     }

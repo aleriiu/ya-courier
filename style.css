@@ -142,7 +142,7 @@ a {
 
 /* hero */
 .hero-bg {
-    background-image: url(./images/hero-banner.png);
+    background-image: url(./images/hero-banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
