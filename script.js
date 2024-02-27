@@ -80,37 +80,71 @@ let dateInput = mainForm.querySelector('#main-form_date');
 const phoneInput = mainForm.querySelector('#main-form_phone');
 
 let dateInputMask = function dateInputMask(elm) {
-  elm.addEventListener('keydown', function (e) {
-    if (e.keyCode !== 8) {
+  elm.addEventListener('textInput', function (e) {
+    let keyCode = e.data.charCodeAt(0);
+    if (e.keyCode !== 8 || e.keyCode !== 46) {
 
-   
-
-    if (e.keyCode < 47 || e.keyCode > 57) {
-      e.preventDefault();
-    }
-
-    let len = elm.value.length;
-
-    // If we're at a particular place, let the user type the slash
-    // i.e., 12.12.1212
-    if (len !== 1 || len !== 3) {
-      if (e.keyCode == 47) {
+      if (e.keyCode < 46 || e.keyCode > 57) {
         e.preventDefault();
+      }
+
+      let len = elm.value.length;
+
+      // If we're at a particular place, let the user type the slash
+      // i.e., 12.12.1212
+      if (len !== 1 || len !== 3) {
+        if (e.keyCode == 47) {
+          e.preventDefault();
+        }
+      }
+
+      // If they don't add the slash, do it for them...
+      if (len === 2) {
+        elm.value += '.';
+      }
+
+      // If they don't add the slash, do it for them...
+      if (len === 5) {
+        elm.value += '.';
       }
     }
 
-    // If they don't add the slash, do it for them...
-    if (len === 2) {
-      elm.value += '.';
-    }
+  })
 
-    // If they don't add the slash, do it for them...
-    if (len === 5) {
-      elm.value += '.';
-    }
-  }
-  });
-};
+}
+
+// let dateInputMask = function dateInputMask(elm) {
+//   elm.addEventListener('keydown', function (e) {
+//     if (e.keyCode !== 8 || e.keyCode !== 46) {
+
+
+
+//     if (e.keyCode < 46 || e.keyCode > 57) {
+//       e.preventDefault();
+//     }
+
+//     let len = elm.value.length;
+
+//     // If we're at a particular place, let the user type the slash
+//     // i.e., 12.12.1212
+//     if (len !== 1 || len !== 3) {
+//       if (e.keyCode == 47) {
+//         e.preventDefault();
+//       }
+//     }
+
+//     // If they don't add the slash, do it for them...
+//     if (len === 2) {
+//       elm.value += '.';
+//     }
+
+//     // If they don't add the slash, do it for them...
+//     if (len === 5) {
+//       elm.value += '.';
+//     }
+//   }
+//   });
+// };
 
 dateInputMask(dateInput);
 
@@ -118,7 +152,7 @@ mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   let radioInput = mainForm.querySelector('input[name=type]:checked').value;
-console.log(`radio: ${radioInput}`);
+  console.log(`radio: ${radioInput}`);
 
   const url = 'https://api.telegram.org/bot7045749206:AAGOxShzwlm9wrC1Fhfk6U7KlJ_cz5azrt4/sendMessage';
 
