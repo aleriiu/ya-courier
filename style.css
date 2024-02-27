@@ -637,9 +637,9 @@ input[type="date"] {
 
 .form__img {
     position: absolute;
-    height: 420px;
+    height: 530px;
     right: 6.668rem;
-    bottom: -1px;
+    bottom: 0;
 }
 
 .form-logo {
