@@ -82,9 +82,8 @@ const phoneInput = mainForm.querySelector('#main-form_phone');
 let dateInputMask = function dateInputMask(elm) {
   elm.addEventListener('textInput', function (e) {
     let keyCode = e.data.charCodeAt(0);
-    if (e.keyCode !== 8 || e.keyCode !== 46) {
 
-      if (e.keyCode < 46 || e.keyCode > 57) {
+      if (keyCode < 47 || keyCode > 57) {
         e.preventDefault();
       }
 
@@ -93,7 +92,7 @@ let dateInputMask = function dateInputMask(elm) {
       // If we're at a particular place, let the user type the slash
       // i.e., 12.12.1212
       if (len !== 1 || len !== 3) {
-        if (e.keyCode == 47) {
+        if (keyCode == 47) {
           e.preventDefault();
         }
       }
@@ -109,7 +108,7 @@ let dateInputMask = function dateInputMask(elm) {
       }
     }
 
-  })
+  )
 
 }
 
